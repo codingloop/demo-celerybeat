@@ -103,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -119,7 +119,6 @@ STATIC_URL = '/static/'
 
 # CELERY Config
 CELERY_BROKER_URL = env('CELERY_BROKER_URL')
-BROKER_USER = env('CELERY_USERNAME')
-BROKER_PASSWORD = env('CELERY_PASSWORD')
 
-# celery -A celerybeat_app worker -l debug
+# celery -A celerybeat_app worker -l info
+# celery -A celerybeat_app worker -l info -B --scheduler django_celery_beat.schedulers:DatabaseScheduler
