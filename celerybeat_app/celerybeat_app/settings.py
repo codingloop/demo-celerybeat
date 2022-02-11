@@ -119,6 +119,7 @@ STATIC_URL = '/static/'
 
 # CELERY Config
 CELERY_BROKER_URL = env('CELERY_BROKER_URL')
+CELERY_IMPORTS = ("tasks", )
 
 
 # celery -A celerybeat_app worker -l info
